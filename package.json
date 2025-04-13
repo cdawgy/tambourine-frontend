@@ -1,5 +1,6 @@
 {
   "name": "tambourine-frontend",
+  "homepage": "https://cdawgy.github.io/tambourine-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
