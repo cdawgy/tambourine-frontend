@@ -1,4 +1,4 @@
-import { BrowserRouter, Router, Routes } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import SiteNavBar from "./components/navigation/SiteNavBar"
 import RoutesConfig from "./routing/RoutesConfig"
 
