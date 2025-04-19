@@ -1,0 +1,14 @@
+.article {
+    margin: 10px 0 20px 0;
+}
+
+.news-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.article-body {
+    padding: 20px;
+}

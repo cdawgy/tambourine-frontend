@@ -1,4 +1,4 @@
-import { Pets } from "@mui/icons-material"
+import { Newspaper, Pets } from "@mui/icons-material"
 import {
   Box,
   List,
@@ -7,17 +7,21 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
 const DrawerList = () => {
+
+  const navigate = useNavigate()
+
   return (
     <Box sx={{ width: 250 }} role="presentation" onClick={() => {}}>
       <List>
-        <ListItem key="Dogs" disablePadding>
+        <ListItem key="News" disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <Pets />
+              <Newspaper />
             </ListItemIcon>
-            <ListItemText primary="Dogs" />
+            <ListItemText primary="News" onClick={() => navigate("/news")}/>
           </ListItemButton>
         </ListItem>
       </List>

@@ -1,4 +1,4 @@
-import Article from "../components/Article"
+import Article from "../components/news/article/Article"
 import { Container, Typography } from "@mui/material"
 import axios from "axios"
 import { useEffect, useState } from "react"
@@ -22,6 +22,7 @@ const News = () => {
       <Typography variant="h5">News</Typography>
       {articles.map((article) => (
         <Article
+          title={article.title}
           imageSource={article.urlToImage}
           source={article.source.name}
           author={article.author}
