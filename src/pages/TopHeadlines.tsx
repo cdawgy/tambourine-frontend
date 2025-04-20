@@ -40,7 +40,7 @@ const News = () => {
         value={selectedCountry}
         disablePortal
         options={countries}
-        onChange={(event, value) => setSelectedCountry(value!)}
+        onChange={(_event, value) => setSelectedCountry(value!)}
         getOptionLabel={(option) => option.name}
         renderOption={(props, option) => {
           const { key, ...optionProps } = props
