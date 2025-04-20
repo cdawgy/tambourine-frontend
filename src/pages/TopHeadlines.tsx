@@ -7,7 +7,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import NewsArticle from "../types/NewsArticle"
 import NewsApi from "../utils/NewsApi"
 import countries from "../constants/news/CountryCodes"
@@ -15,7 +15,7 @@ import CountryCode from "../types/CountryCode"
 import EmptyArticle from "../components/news/empty-article/EmptyArticle"
 
 const News = () => {
-  const newsApi = new NewsApi("07a4eb973ebc4033b081244bd9ccf7b3")
+  const newsApi = useMemo(() => new NewsApi("07a4eb973ebc4033b081244bd9ccf7b3"), [])
   const [articles, setArticles] = useState<NewsArticle[]>([])
   const [isArticlesLoading, setIsArticlesLoading] = useState<boolean>(true)
   const [selectedCountry, setSelectedCountry] = useState<CountryCode>({
@@ -31,7 +31,7 @@ const News = () => {
         setArticles(newsArticles)
       })
       .finally(() => setIsArticlesLoading(false))
-  }, [selectedCountry])
+  }, [selectedCountry, newsApi])
 
   return (
     <Container>
