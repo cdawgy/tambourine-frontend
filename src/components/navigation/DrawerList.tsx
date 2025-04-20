@@ -1,4 +1,4 @@
-import { Newspaper, Pets } from "@mui/icons-material"
+import { Newspaper } from "@mui/icons-material"
 import {
   Box,
   List,
@@ -21,7 +21,7 @@ const DrawerList = () => {
             <ListItemIcon>
               <Newspaper />
             </ListItemIcon>
-            <ListItemText primary="News" onClick={() => navigate("/news")}/>
+            <ListItemText primary="Top Headlines" onClick={() => navigate("/top-headlines")}/>
           </ListItemButton>
         </ListItem>
       </List>

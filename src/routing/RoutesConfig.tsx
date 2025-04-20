@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom"
 import Dog from "../pages/Dog"
-import News from "../pages/News"
+import TopHeadlines from "../pages/TopHeadlines"
 
 const RoutesConfig = () => {
     return(
         <Routes>
             <Route path="/" element={<Dog />}/>
-            <Route path="/news" element={<News />}/>
+            <Route path="/top-headlines" element={<TopHeadlines />}/>
         </Routes>
     )
 }
