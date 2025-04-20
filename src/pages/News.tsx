@@ -3,18 +3,19 @@ import { Container, Typography } from "@mui/material"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import NewsArticle from "../types/NewsArticle"
+import NewsApi from "../utils/NewsApi"
 
 const News = () => {
+  const newsApi = new NewsApi("07a4eb973ebc4033b081244bd9ccf7b3")
   const [articles, setArticles] = useState<NewsArticle[]>([])
 
-  const key = "07a4eb973ebc4033b081244bd9ccf7b3"
-  const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`
-
   useEffect(() => {
-    axios.get(url).then((response) => {
-      console.log()
-      setArticles(response.data.articles)
-    })
+    newsApi
+      .getTopHeadlines("us")
+      .then((newsArticles) => {
+        console.log(newsArticles)
+        setArticles(newsArticles)
+      })
   }, [])
 
   return (
