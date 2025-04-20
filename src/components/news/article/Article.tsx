@@ -7,9 +7,10 @@ const Article = (props: {
   imageSource: string
   source: string
   author: string
-  description: string
+  description: string,
+  url: string
 }) => {
-  const { title, imageSource, source, author, description } = props
+  const { title, imageSource, source, author, description, url } = props
 
   return (
     <Grid container className="article">
@@ -24,7 +25,7 @@ const Article = (props: {
         <Typography variant="subtitle1">{description}</Typography>
         <Typography variant="subtitle2">{author}</Typography>
         <Typography variant="subtitle2">{source}</Typography>
-        <ExternalLink text="Read more" />
+        <ExternalLink text="Read more" url={url} />
       </Grid>
     </Grid>
   )

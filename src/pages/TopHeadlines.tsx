@@ -61,6 +61,7 @@ const News = () => {
             source={article.source.name}
             author={article.author}
             description={article.description}
+            url={article.url}
           />
         ))}
       {articles.length === 0 && !isArticlesLoading && <EmptyArticle />}
